@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Publication;
+use App\Http\Controllers\PublicationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('posts', [PublicationController::class, 'showWithFilter']);
+
+Route::get('posts/{code}', [PublicationController::class, 'showWithtoken']);
