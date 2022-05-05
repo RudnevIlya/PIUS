@@ -1,2 +1,0 @@
-# PIUS
-PIUS Labs
